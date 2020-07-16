@@ -10,7 +10,30 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        NavigationView{
+            
+            TabView{
+                DeviceControlView()
+                .tabItem {
+                    Image(systemName: "house")
+                    .renderingMode(.original)
+                }
+                
+                
+                Image(systemName: "person")
+                .tabItem {
+                    Image(systemName: "person")
+                }
+                
+                Text("menu")
+                .tabItem {
+                    Image(systemName: "square.grid.2x2")
+                }
+                
+                
+            }
+            .navigationBarItems(leading: Image(systemName: "line.horizontal.3"), trailing: Image(systemName: "gear"))
+        }
     }
 }
 

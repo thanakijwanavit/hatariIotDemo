@@ -15,6 +15,8 @@
 		042D4DF924C0158000FBA3F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042D4DF724C0158000FBA3F7 /* LaunchScreen.storyboard */; };
 		042D4E0424C0158000FBA3F7 /* hatariIotDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4E0324C0158000FBA3F7 /* hatariIotDemoTests.swift */; };
 		042D4E0F24C0158000FBA3F7 /* hatariIotDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4E0E24C0158000FBA3F7 /* hatariIotDemoUITests.swift */; };
+		042D4E1D24C015E400FBA3F7 /* DeviceControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4E1C24C015E400FBA3F7 /* DeviceControlView.swift */; };
+		042D4E1F24C01D2100FBA3F7 /* AirPurifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4E1E24C01D2100FBA3F7 /* AirPurifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		042D4E0A24C0158000FBA3F7 /* hatariIotDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hatariIotDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		042D4E0E24C0158000FBA3F7 /* hatariIotDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hatariIotDemoUITests.swift; sourceTree = "<group>"; };
 		042D4E1024C0158000FBA3F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042D4E1C24C015E400FBA3F7 /* DeviceControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControlView.swift; sourceTree = "<group>"; };
+		042D4E1E24C01D2100FBA3F7 /* AirPurifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPurifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +106,12 @@
 				042D4DEC24C0157E00FBA3F7 /* AppDelegate.swift */,
 				042D4DEE24C0157E00FBA3F7 /* SceneDelegate.swift */,
 				042D4DF024C0157E00FBA3F7 /* ContentView.swift */,
+				042D4E1C24C015E400FBA3F7 /* DeviceControlView.swift */,
 				042D4DF224C0158000FBA3F7 /* Assets.xcassets */,
 				042D4DF724C0158000FBA3F7 /* LaunchScreen.storyboard */,
 				042D4DFA24C0158000FBA3F7 /* Info.plist */,
 				042D4DF424C0158000FBA3F7 /* Preview Content */,
+				042D4E1E24C01D2100FBA3F7 /* AirPurifier.swift */,
 			);
 			path = hatariIotDemo;
 			sourceTree = "<group>";
@@ -269,6 +275,8 @@
 			files = (
 				042D4DED24C0157E00FBA3F7 /* AppDelegate.swift in Sources */,
 				042D4DEF24C0157E00FBA3F7 /* SceneDelegate.swift in Sources */,
+				042D4E1D24C015E400FBA3F7 /* DeviceControlView.swift in Sources */,
+				042D4E1F24C01D2100FBA3F7 /* AirPurifier.swift in Sources */,
 				042D4DF124C0157E00FBA3F7 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
