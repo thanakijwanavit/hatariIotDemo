@@ -23,13 +23,24 @@ struct InputButtonStyle: ButtonStyle {
 
 struct DeviceControlView: View {
     @State var presentGraph:Bool = false
+    @State var speed:Int = 1
+    
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
         VStack{
 //            displays
             
             HStack{
-                Text("speed: 5")
+                Text("speed: \(self.speed)")
                 .font(.headline)
+                    .onReceive(timer) { (_) in
+                        debugPrint("timer is called")
+                        AirPurifier.getStatus { (state) in
+                            let purifierStatus = state as PurifierStatus
+                            self.speed = purifierStatus.state.speed
+                        }
+                }
                 
                 
             }

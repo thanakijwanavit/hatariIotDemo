@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		042D4E0F24C0158000FBA3F7 /* hatariIotDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4E0E24C0158000FBA3F7 /* hatariIotDemoUITests.swift */; };
 		042D4E1D24C015E400FBA3F7 /* DeviceControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4E1C24C015E400FBA3F7 /* DeviceControlView.swift */; };
 		042D4E1F24C01D2100FBA3F7 /* AirPurifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D4E1E24C01D2100FBA3F7 /* AirPurifier.swift */; };
+		046D44B024C045CD00136419 /* AWSSDKSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 046D44AF24C045CD00136419 /* AWSSDKSwift */; };
+		046D44B224C045CD00136419 /* IoT in Frameworks */ = {isa = PBXBuildFile; productRef = 046D44B124C045CD00136419 /* IoT */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046D44B024C045CD00136419 /* AWSSDKSwift in Frameworks */,
+				046D44B224C045CD00136419 /* IoT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +107,7 @@
 		042D4DEB24C0157E00FBA3F7 /* hatariIotDemo */ = {
 			isa = PBXGroup;
 			children = (
+				046D44B324C045FF00136419 /* api */,
 				042D4DEC24C0157E00FBA3F7 /* AppDelegate.swift */,
 				042D4DEE24C0157E00FBA3F7 /* SceneDelegate.swift */,
 				042D4DF024C0157E00FBA3F7 /* ContentView.swift */,
@@ -111,7 +116,6 @@
 				042D4DF724C0158000FBA3F7 /* LaunchScreen.storyboard */,
 				042D4DFA24C0158000FBA3F7 /* Info.plist */,
 				042D4DF424C0158000FBA3F7 /* Preview Content */,
-				042D4E1E24C01D2100FBA3F7 /* AirPurifier.swift */,
 			);
 			path = hatariIotDemo;
 			sourceTree = "<group>";
@@ -142,6 +146,14 @@
 			path = hatariIotDemoUITests;
 			sourceTree = "<group>";
 		};
+		046D44B324C045FF00136419 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				042D4E1E24C01D2100FBA3F7 /* AirPurifier.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +170,10 @@
 			dependencies = (
 			);
 			name = hatariIotDemo;
+			packageProductDependencies = (
+				046D44AF24C045CD00136419 /* AWSSDKSwift */,
+				046D44B124C045CD00136419 /* IoT */,
+			);
 			productName = hatariIotDemo;
 			productReference = 042D4DE924C0157E00FBA3F7 /* hatariIotDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -222,7 +238,7 @@
 				};
 			};
 			buildConfigurationList = 042D4DE424C0157E00FBA3F7 /* Build configuration list for PBXProject "hatariIotDemo" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -230,6 +246,9 @@
 				Base,
 			);
 			mainGroup = 042D4DE024C0157E00FBA3F7;
+			packageReferences = (
+				046D44AE24C045CD00136419 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */,
+			);
 			productRefGroup = 042D4DEA24C0157E00FBA3F7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -602,6 +621,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		046D44AE24C045CD00136419 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swift-aws/aws-sdk-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		046D44AF24C045CD00136419 /* AWSSDKSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 046D44AE24C045CD00136419 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = AWSSDKSwift;
+		};
+		046D44B124C045CD00136419 /* IoT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 046D44AE24C045CD00136419 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = IoT;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 042D4DE124C0157E00FBA3F7 /* Project object */;
 }
